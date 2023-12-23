@@ -1,10 +1,11 @@
-package com.example.workload.rest;
+package com.example.rest.request;
 
+import com.example.rest.ActionType;
 import jakarta.validation.constraints.NotNull;
 
 import java.util.Date;
 
-public class TrainingRequest {
+public class TrainingSecondaryRequest {
     @NotNull
     private String trainerUsername;
 

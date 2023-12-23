@@ -1,4 +1,4 @@
-package com.example.workload.rest;
+package com.example.rest;
 
 public enum ActionType {
     ADD, DELETE

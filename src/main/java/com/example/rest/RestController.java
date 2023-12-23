@@ -1,6 +1,7 @@
-package com.example.workload.rest;
+package com.example.rest;
 
-import com.example.workload.service.TrainerWorkloadService;
+import com.example.rest.request.TrainingSecondaryRequest;
+import com.example.service.TrainerWorkloadService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,7 +16,7 @@ public class RestController {
     private TrainerWorkloadService trainerWorkloadService;
 
     @PostMapping
-    public ResponseEntity<Void> addTraining(@RequestBody TrainingRequest request) {
+    public ResponseEntity<Void> addTraining(@RequestBody TrainingSecondaryRequest request) {
         trainerWorkloadService.actionTraining(request);
         return ResponseEntity.ok().build();
     }

@@ -1,4 +1,4 @@
-package com.example.workload.rest;
+package com.example.rest;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
