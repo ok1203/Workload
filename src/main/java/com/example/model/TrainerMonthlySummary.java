@@ -1,11 +1,23 @@
 package com.example.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Document(collection = "trainer_summary")
 public class TrainerMonthlySummary {
+
+    @Id
+    private String id;
+
+    @Indexed(unique = true)
     private String trainerUsername;
+    @Indexed
     private String trainerFirstname;
+    @Indexed
     private String trainerLastname;
     private boolean active;
     private List<List<Integer>> trainingSummaryDuration;
@@ -22,6 +34,14 @@ public class TrainerMonthlySummary {
             }
             trainingSummaryDuration.add(monthsList); // Add the 12-month list for each year
         }
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getTrainerUsername() {
